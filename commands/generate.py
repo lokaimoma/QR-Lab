@@ -1,3 +1,4 @@
+from tkinter.font import BOLD
 import typer
 
 
@@ -16,3 +17,6 @@ def generate(
     """
     image = generate_default(data=data)
     image.save(f"{nom}.png")
+    typer.secho(message="Code QR généré avec succès", fg=typer.colors.GREEN, bold=True)
+    location = typer.style(text="Location =>", fg=typer.colors.GREEN, underline=True, bold=True)
+    typer.echo(message=f"{location} ./{nom}.png")
