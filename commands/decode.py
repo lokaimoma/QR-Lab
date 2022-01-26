@@ -37,7 +37,7 @@ def decode(
             bold=True,
             underline=True
         )
-        typer.echo(message=f"{head} {data_.data}")
+        typer.echo(message=f"{head} {data_.data.decode()}")
         head = typer.style(
             text="Points =>",
             fg=typer.colors.GREEN,
